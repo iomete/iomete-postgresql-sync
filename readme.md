@@ -1,4 +1,4 @@
-# iomete: JDBC Sync
+# IOMETE: JDBC Sync
 
 This library provides easily replicate tables from JDBC databases (MySQL, PostgreSQL, etc.) to iomete
 
@@ -24,7 +24,7 @@ Specify the following parameters (these are examples, you can change them based 
 - **Schedule:** `0 0/22 1/1 * *`
 - **Docker Image:** `iomete/iomete_postgresql_sync:1.0.0`
 - **Main application file:** `local:///app/driver.py`
-- **Environment Variables:** `DB_PASSWORD`: `Xt49TLcW`
+- **Environment Variables:** `DB_PASSWORD`: `******`
 - **Config file:** 
 ```hocon
 {
@@ -143,24 +143,6 @@ Specify the following parameters (these are examples, you can change them based 
 </tbody>
 </table>
 
-Create Spark Job
-![Create Spark Job.png](doc/img/1-create-spark-job.png)
-
-Create Spark Job - Instance
-
->You can use **Environment Variables** to store your sensitive data like password, secrets, etc. Then you can use these variables in your config file using the <code>${DB_PASSWORD}</code> syntax.
-
-![Create Spark Job.png](doc/img/2-create-env-variables.png)
-
-Create Spark Job - Application Config
-![Create Spark Job - Application Config.png](doc/img/3-create-spark-job-application-config.png)
-
-And, hit the create button.
-
----
-The job will be run based on the defined schedule. But, you can trigger the job manually by clicking on the `Run` button.
-
-![Manual Run](doc/img/4-manual-run.png)
 
 ## Development
 
